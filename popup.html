@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Groups Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h2>Tab Groups Manager</h2>
+  <div id="status-section" class="status-section">
+    <span id="window-count">0 windows</span> | <span id="group-count">0 groups</span> | <span id="tab-count">0 tabs</span>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search by group name...">
+    <select id="sort-select">
+      <option value="name">Sort by Name</option>
+      <option value="color">Sort by Color</option>
+      <option value="tabs">Sort by Tab Count</option>
+      <option value="created">Sort by Date Created</option>
+      <option value="modified">Sort by Last Modified</option>
+    </select>
+  </div>
+
+  <div id="groups-container">Loading tab groups...</div>
+
+  <div class="control-panel">
+    <h3>Create New Group</h3>
+    <div class="input-group">
+      <label for="group-name">Group Name:</label>
+      <input type="text" id="group-name" placeholder="Enter group name">
+    </div>
+    <div class="input-group">
+      <label for="group-color">Color:</label>
+      <select id="group-color">
+        <option value="grey">Grey</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="pink">Pink</option>
+        <option value="purple">Purple</option>
+        <option value="cyan">Cyan</option>
+      </select>
+    </div>
+    <button id="create-group" class="btn">Create Group from Current Tab</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
